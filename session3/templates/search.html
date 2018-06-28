@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa Đông Không Lạnh</title>
+</head>
+<body>
+    <h1>Search Page</h1>
+    {% for service in all_service %}
+        <div>         
+            <img src="{{ service.img }}" width="400" height="400" alt="">
+            <p>Nick Name : {{ service.name }}</p>
+            <p>Giới tính: {{ service.gender }} </p>
+            <p>Năm sinh : {{ service.yob }}</p>
+            <a href=" {{ url_for('detail', service_id=service.id) }}">More</a>
+            <hr>
+        </div>
+    {% endfor %}
+</body>
+</html>

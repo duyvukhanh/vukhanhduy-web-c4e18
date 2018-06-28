@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Admin is trator</h1>
+    <table border="1px">
+        <thead>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Năm sinh</th>
+            <th>Giới tính</th>
+            <th>Chiều cao</th>
+            <th>SĐT</th>
+            <th>Địa chỉ</th>
+            <th>Mô tả</th>
+            <th>3 vòng</th>
+            <th>Ảnh đại diện</th>
+            <th>Trạng thái</th>
+        </thead>
+        <tbody>
+            {% for service in all_service %}
+            <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ service.name }}</td>
+                    <td>{{ service.yob }}</td>
+                    <td>
+                        {% if service.gender == 1 %}
+                            Nam
+                        {% else %}
+                            Nữ
+                        {% endif %}
+                    </td>
+                    <td>{{ service.height }}</td>
+                    <td>{{ service.phone }}</td>
+                    <td>{{ service.address }}</td>
+                    <td>{{ service.description }}</td>
+                    <td>{{ service.measurement }}</td>
+                    <td><img src="{{ service.img }}" width="50" height="50"></td>
+                    <td> {% if service.status == False %}
+                            Available
+                        {% else %}
+                            Not Available
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ url_for('update',service_id = service.id) }}">Sửa</a>
+                        <a href="{{ url_for('delete',service_id = service.id) }}">Xóa</a>
+                    </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('create') }}">Đăng kí làm gấu </a>
+</body>
+</html>

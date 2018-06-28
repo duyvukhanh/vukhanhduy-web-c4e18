@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mua Dong Khong Lanh</title>
+</head>
+<body>
+    <h1>Search Page</h1>
+    {% for customer in all_customer %}
+        <div>
+            {% if customer.gender == 0 %}
+            <img src="../static/image/female-profile.jpg" alt="">
+            {% else %}
+            <img src="../static/image/male-profile.jpg" alt="">
+            {% endif %}
+            <p>Ten : {{ customer.name }}</p>
+            <p>Gioi tinh: {{ customer.gender }} </p>
+            <p>Cong ty : {{ customer.company }}</p>
+            <p>Dia chi : {{ customer.address }}</p>
+            <p>Nam sinh : {{ customer.yob }}</p>
+            <p>Email : {{ customer.email }}</p>
+            <p>Contact : {{ customer.contact }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+</body>
+</html>

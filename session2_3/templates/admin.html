@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Admin is trator</h1>
+    <table border="1px">
+        <thead>
+            <th>STT</th>
+            <th>Ten</th>
+            <th>yob</th>
+            <th>Gioi tinh</th>
+            <th>Chieu cao</th>
+            <th>SDT</th>
+            <th>Dia chi</th>
+            <th>Trang thai</th>
+        </thead>
+        <tbody>
+            {% for service in all_service %}
+            <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ service.name }}</td>
+                    <td>{{ service.yob }}</td>
+                    <td>
+                        {% if service.gender == 1 %}
+                            Nam
+                        {% else %}
+                            Nu
+                        {% endif %}
+                    </td>
+                    <td>{{ service.height }}</td>
+                    <td>{{ service.phone }}</td>
+                    <td>{{ service.address }}</td>
+                    <td> {% if service.status == False %}
+                            Ranh
+                        {% else %}
+                            Ban
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="{{ url_for('delete',service_id = service.id) }}">Xoa</a>
+                    </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>
