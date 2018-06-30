@@ -15,5 +15,9 @@
     <p><b>Địa chỉ</b>: {{ service.address }}</p>
     <p><b>Mô tả</b>: {{ service.description }}</p>
     <p><b>3 Vòng</b>: {{ service.measurement }}</p>
+    <br>
+    <a href="{{ url_for('orderr',service_id = service.id) }}">Yêu cầu dịch vụ</a>
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
 </body>
 </html>

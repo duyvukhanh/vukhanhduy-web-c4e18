@@ -9,7 +9,21 @@ class Service(Document):
   phone = StringField()
   address = StringField()
   status = BooleanField()
-  description = ListField()
-  measurement = ListField()
+  description = StringField()
+  measurement = StringField()
   img = StringField()
 
+class User(Document):
+  name = StringField()
+  email = StringField()
+  username = StringField()
+  password = StringField()
+  status = BooleanField()
+
+class Order(Document):
+  serviceid = StringField()
+  servicename = StringField()
+  userid = StringField()
+  time = DateTimeField()
+  is_accepted = BooleanField()
+  email = StringField()

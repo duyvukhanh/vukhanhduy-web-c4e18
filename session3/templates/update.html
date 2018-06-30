@@ -34,9 +34,19 @@
             <input type="text" name="measurement" value="{{ service.measurement }}"><br>
 
             {% if service.gender == 0 %}
-                <label><input type="radio" name="gender" value="1">Gắn súng?</label>
+                <label>Male</label>
+                <input type="radio" name="gender" value="1">
+                <br>
+
+                <label>Female</label>
+                <input type="radio" name="gender" value="0" checked><br>
             {% else %} 
-                <label><input type="radio" name="gender" value="0" >Cắt súng?</label>
+                <label>Male</label>
+                <input type="radio" name="gender" value="1" checked>
+                <br>
+                
+                <label>Female</label>
+                <input type="radio" name="gender" value="0"><br>
             {% endif %}
     
             <button type="submit">Cập nhật</button>

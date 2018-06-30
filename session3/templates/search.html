@@ -12,7 +12,7 @@
         <div>         
             <img src="{{ service.img }}" width="400" height="400" alt="">
             <p>Nick Name : {{ service.name }}</p>
-            <p>Giới tính: {{ service.gender }} </p>
+            <p>Giới tính: {{ "Nu" if service.gender == 0 else "Nam" }} </p>
             <p>Năm sinh : {{ service.yob }}</p>
             <a href=" {{ url_for('detail', service_id=service.id) }}">More</a>
             <hr>

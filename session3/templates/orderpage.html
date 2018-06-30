@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quản lý yêu cầu</h1>
+    <table border="1px">
+        <thead>
+            <th>STT</th>
+            <th>Đối Tác</th>
+            <th>Người Dùng</th>
+            <th>Thời gian yêu cầu</th>
+            <th>Trạng thái</th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for order in all_orders %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ order.servicename }}</td>
+                <td>{{ order.userid }}</td>
+                <td>{{ order.time }}</td>
+                <td>
+                    {% if order.is_accepted == True %}
+                        Duyệt
+                    {% else %}
+                        Chưa duyệt
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ url_for('accept',order_id = order.id) }}">Accept</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
