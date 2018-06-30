@@ -151,8 +151,8 @@ def accept(order_id):
     order.update(set__is_accepted = True)
     order.reload()
     gmail = GMail('duyvukhanhc4e@gmail.com','vukhanhduy')
-    html="Yêu cầu của bạn đã được xử lý, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Cảm ơn bạn đã sử dụng dịch vụ của ‘Mùa Đông Không Lạnh"
-    msg = Message('Hello',to=order.email,html=html)
+    mess="Yêu cầu của bạn đã được xử lý, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Cảm ơn bạn đã sử dụng dịch vụ của ‘Mùa Đông Không Lạnh"
+    msg = Message('Hello',to=order.email,html=mess)
     gmail.send(msg)
     return redirect(url_for('ordermanagement'))
 
