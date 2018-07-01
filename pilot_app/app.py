@@ -111,7 +111,9 @@ def login():
         for user in users:
             if username == user.username:
                 if password == user.password:
-                    session['loggedin'] = True 
+                    session['loggedin'] = True
+                    session['useremail'] = user.email
+                    
 
                     return redirect(url_for('search'))
                 else:
@@ -122,6 +124,8 @@ def login():
 @app.route('/logout')
 def logout():
     del session['loggedin']
+    del session['useremail']
+    
     return redirect(url_for('login'))
 
 
@@ -132,8 +136,8 @@ def orderr(service_id):
     new_order = Order(
         serviceid = service_id,
         servicename = order_service.name,
-        email = "cho_nay_cung_kho@gmail.com",
-        userid = "Chỗ này khó quá anh không biết làm",
+        email = session['useremail'],
+        userid = "Cái này khó quá",
         time = datetime.now(),
         is_accepted = False
     )    
