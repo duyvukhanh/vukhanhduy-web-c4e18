@@ -1,0 +1,32 @@
+/* tag name selector */
+h1 {
+    color: red
+}
+
+/* id selector */
+#heading2 {
+    color: blue;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;          
+}
+
+/* class selector */
+.text-right{
+    text-align: right
+}
+
+.text-red{
+    color: red
+}
+
+.text-uppercase{
+    text-transform: uppercase
+}
+
+.font-weight-bold{
+    font-weight: bold
+}
+
+.font-indieflower{
+    font-family: 'Indie Flower', cursive;
+}
