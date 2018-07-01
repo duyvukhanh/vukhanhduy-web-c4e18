@@ -27,3 +27,4 @@ class Order(Document):
   time = DateTimeField()
   is_accepted = BooleanField()
   email = StringField()
+  username = StringField()

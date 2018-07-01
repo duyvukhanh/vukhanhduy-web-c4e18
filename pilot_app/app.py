@@ -113,6 +113,7 @@ def login():
                 if password == user.password:
                     session['loggedin'] = True
                     session['useremail'] = user.email
+                    session['username'] = user.name
                     
 
                     return redirect(url_for('search'))
@@ -125,6 +126,7 @@ def login():
 def logout():
     del session['loggedin']
     del session['useremail']
+    del session['username']
     
     return redirect(url_for('login'))
 
@@ -137,7 +139,7 @@ def orderr(service_id):
         serviceid = service_id,
         servicename = order_service.name,
         email = session['useremail'],
-        userid = "Cái này khó quá",
+        username = session['username'],
         time = datetime.now(),
         is_accepted = False
     )    
