@@ -107,26 +107,20 @@ def login():
         password = form['password']
 
         #query from database
-        users = User.objects()
-        for user in users:
-            if username == user.username:
-                if password == user.password:
-                    session['loggedin'] = True
-                    session['useremail'] = user.email
-                    session['username'] = user.name
-                    
-
-                    return redirect(url_for('search'))
-                else:
-                    return "Wrong Pass"
-            else:
-                return "User Not Found"
+        user = User.objects(username = username,password = password)
+        if len(user) == 0:
+            return "User not found"
+        else:                   
+            session['loggedin'] = True
+            # session['useremail'] = user.email
+            # session['username'] = user.name
+            return redirect(url_for('search'))
 
 @app.route('/logout')
 def logout():
     del session['loggedin']
-    del session['useremail']
-    del session['username']
+    # del session['useremail']
+    # del session['username']
     
     return redirect(url_for('login'))
 

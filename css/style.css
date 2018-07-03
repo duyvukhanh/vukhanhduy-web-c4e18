@@ -1,32 +1,73 @@
-/* tag name selector */
-h1 {
-    color: red
+.text-success {
+    color: green
 }
 
-/* id selector */
-#heading2 {
-    color: blue;
-    font-family: 'Indie Flower', cursive;
-    font-size: 40px;          
+.text-center {
+    text-align: center
 }
 
-/* class selector */
-.text-right{
-    text-align: right
+.w-200px {
+    width: 200px
 }
 
-.text-red{
-    color: red
+.h-100px {
+    height: 100px
 }
 
-.text-uppercase{
-    text-transform: uppercase
+.bg-blue {
+    background-color: dodgerblue
 }
 
-.font-weight-bold{
-    font-weight: bold
+.bg-red {
+    background-color: red
 }
 
-.font-indieflower{
-    font-family: 'Indie Flower', cursive;
+.bg-lightgreen {
+    background-color: lightgreen
+}
+
+.d-inlineblock {
+    display: inline-block
+}
+
+.box-model {
+    /* border: 3px solid blue;
+    margin: 10px 30px; */
+    padding: 25px 500px 25px 25px
+}
+
+.w-50 {
+    width: 50%
+}
+
+.h-50px {
+    height: 50px
+}
+
+.h-200 {
+    height: 200px
+}
+
+.h-600 {
+    height: 600px
+}
+
+.h-150 {
+    height: 150px
+}
+
+.w-15 {
+    width: 15%
+}
+
+.w-69 {
+    width: 69%
+}
+
+.w-99 {
+    width: 99%
+}
+
+.w-40 {
+    width: 40%
 }
