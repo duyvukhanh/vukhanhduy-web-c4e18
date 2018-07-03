@@ -3,7 +3,8 @@
 }
 
 .bg-ele {
-    background-image: url("https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-0.3.5&s=6d65fecfa4a0fc122db010feb1d08abd&auto=format&fit=crop&w=1500&q=80");
+    background-image: url("https://www.desktopbackground.org/p/2012/09/20/455820_1440x900-fc-barcelona-camp-nou-desktop-pc-and-mac-wallpapers_1440x900_h.jpg");
+    background-size: cover;
     background-position: center center;
     height: 250px;
     width: 45%;
@@ -14,7 +15,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 150px;
+    height: 110px;
 }
 
 
@@ -52,20 +53,26 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 50px;
+    height: 70px;
+    color: white;
 }
 
 #footer {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    height: 50px;
+    height: 70px;
+    color: white;
+    
 }
 
 .name {
     display: flex;
     justify-content: center;  
-    align-items: flex-start;
-    height: 80px;
+    align-items: center;
+    height: 40px;
     width: 80px;
+    border-top-style: solid;
+    border-color: white;
+    border-width: 1px;
 }
