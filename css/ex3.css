@@ -383,38 +383,39 @@
     justify-content: space-between;
     align-content: space-between;
 }
-
+.vang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 23%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(168, 168, 168);
+}
 .vang1 {
     background-image: url("pics/cookbooks-blog.jpg");
     background-size: cover;
-    height: 30%;
-    width: 23%;
-    border-width: thin;
-    border-style: double;
+    height: 95%;
+    width: 95%;
 }
 .vang2 {
     background-image: url("pics/potato.jpg");
     background-size: cover;
-    height: 30%;
-    width: 23%;
-    border-width: thin;
-    border-style: double;
+    height: 95%;
+    width: 95%;
 }
 .vang3 {
     background-image: url("pics/pinterest.jpg");
     background-size: cover;
-    height: 30%;
-    width: 23%;
-    border-width: thin;
-    border-style: double;
+    height: 95%;
+    width: 95%;
 }
 .vang4 {
     background-image: url("pics/dinner-blog.jpg");
     background-size: cover;
-    height: 30%;
-    width: 23%;
-    border-width: thin;
-    border-style: double;
+    height: 95%;
+    width: 95%;
 }
 
 .cam {
