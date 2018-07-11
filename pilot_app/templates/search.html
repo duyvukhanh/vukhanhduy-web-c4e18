@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mùa Đông Không Lạnh</title>
+    {% include 'meta-data.html' %}
+    
 </head>
 <body>
-    <h1>Search Page</h1>
+    <!-- <h1>Search Page</h1>
     {% for service in all_service %}
         <div>         
             <img src="{{ service.img }}" width="400" height="400" alt="">
@@ -17,6 +19,20 @@
             <a href=" {{ url_for('detail', service_id=service.id) }}">More</a>
             <hr>
         </div>
-    {% endfor %}
+    {% endfor %} -->
+    <div class="d-flex justify-content-center w-100">
+        <div class="w-60">
+                {% include 'homepage/navigation.html' %}
+                {% include 'searchpage/title.html' %}
+                {% include 'searchpage/searchbar.html' %}
+                {% include 'searchpage/list.html' %}
+                {% include 'searchpage/footer.html' %}
+                
+                
+                
+                
+        </div>
+    </div>
+    
 </body>
 </html>

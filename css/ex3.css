@@ -273,6 +273,8 @@
     display: flex;
     background-image: url("pics/header.jpg");
     background-size: cover;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
     height: 83%;
     width: 100%;
     justify-content: center;

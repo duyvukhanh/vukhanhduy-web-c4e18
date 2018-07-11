@@ -1,0 +1,18 @@
+<div class="h-500px w-100 d-flex justify-content-center border">
+    <div class="h-100 w-60">
+            <img src="{{ service.img }}" width="100%" height="100%" alt="">  
+    </div>
+</div>
+<div class="h-600px w-100 d-flex flex-wrap bg-secondary mb-0">
+        <h2 class="w-100 mx-3 mt-4 text-light">{{ service.name }}</h2> <br>
+        <p class="w-100 mx-5 text-light"><b>Năm Sinh</b>: {{ service.yob }}</p> <br>
+        <p class="w-100 mx-5 text-light"><b>Chiều Cao</b>: {{ service.height }}</p><br>
+        <p class="w-100 mx-5 text-light"><b>SDT</b>: {{ service.phone }}</p><br>
+        <p class="w-100 mx-5 text-light"><b>Địa chỉ</b>: {{ service.address }}</p><br>
+        <p class="w-100 mx-5 text-light"><b>Mô tả</b>: {{ service.description }}</p><br>
+        <p class="w-100 mx-5 text-light"><b>3 Vòng</b>: {{ service.measurement }}</p><br>
+        <div class="w-100 mx-5 d-flex justify-content-end mb-3">
+                        <button type="button" class="btn btn-dark">Yêu cầu dịch vụ</button>
+
+        </div>
+</div>

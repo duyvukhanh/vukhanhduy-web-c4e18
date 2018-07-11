@@ -21,11 +21,11 @@ def search():
 
 @app.route('/detail/<service_id>')
 def detail(service_id):
-    if "loggedin" in session:
+    # if "loggedin" in session:
         service = Service.objects.with_id(service_id)
         return render_template('service_detail.html',service=service)
-    else:
-        return redirect(url_for('login'))
+    # else:
+    #     return redirect(url_for('login'))
 
 @app.route('/admin')
 def admin():

@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ service.name }} detail</title>
+    {% include 'meta-data.html' %}
+    
 </head>
 <body>
-    <img src="{{ service.img }}" width="400" height="400" alt="">     
+    <!-- <img src="{{ service.img }}" width="400" height="400" alt="">     
     <h2>{{ service.name }}</h2>
     <p><b>Năm Sinh</b>: {{ service.yob }}</p>
     <p><b>Chiều Cao</b>: {{ service.height }}</p>
@@ -18,6 +20,19 @@
     <br>
     <a href="{{ url_for('orderr',service_id = service.id) }}">Yêu cầu dịch vụ</a>
     <br>
-    <a href="{{ url_for('logout') }}">Logout</a>
+    <a href="{{ url_for('logout') }}">Logout</a> -->
+    <div class="d-flex justify-content-center w-100">
+            <div class="w-60">
+                    {% include 'homepage/navigation.html' %}
+                    {% include 'detailpage/title.html' %}
+                    {% include 'detailpage/detail.html' %}
+                    {% include 'detailpage/footer.html' %}
+                    
+                    
+                    
+                    
+        </div>
+    </div>
+    
 </body>
 </html>

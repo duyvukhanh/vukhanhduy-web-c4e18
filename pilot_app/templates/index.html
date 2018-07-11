@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mua Dong Khong Lanh</title>
+    {% include 'meta-data.html' %}
+    
 </head>
 <body>
-    <h1>Dịch Vụ Thuê Gấu</h1>
-    <a href="{{ url_for('login') }}">Đăng nhập</a>
-    <br>
-    <a href="{{ url_for('signup') }}">Đăng ký</a>
-    <br>
-    <a href="{{ url_for('search') }}">Danh sách</a>
-    <hr>
-    <a href="{{ url_for('admin') }}">Chỉnh sửa</a>
+    <div class="d-flex justify-content-center w-100">
+        <div class="w-60">
+                {% include 'homepage/navigation.html' %}
+                {% include 'homepage/carousel.html' %}
+                {% include 'homepage/welcome.html' %}
+                {% include 'homepage/vote.html' %}
+                {% include 'homepage/service.html' %}
+                {% include 'homepage/footer.html' %}
+        </div>
+
+    </div>
+   
+    
+
+    
 </body>
 </html>
